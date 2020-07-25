@@ -1,0 +1,54 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+
+body,
+html {
+  height: 700px;
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.jumbotron{
+  background-image: url("123.jpg") ;
+  margin-top: 20px;
+  height: 250px;
+  }
+
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  }
+
+.col1 {
+  width: 50%;
+  float: left;
+}
+
+.col2 {
+  width: 20%;
+  float: right;
+}
+
+.col3 {
+  width: 20%;
+  float: right;
+}
+
+.center {
+  display: table-cell;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.p1 {
+  text-align: center
+}

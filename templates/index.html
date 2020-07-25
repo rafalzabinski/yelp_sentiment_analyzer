@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sentiment Analysis</title>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 jumbotron text-center">
+          <h1 style="color:white;"> </h1>
+            <h4 style = "color:white;">   </h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <h2>Sentiment Analysis Tool</h2>
+        <p>Our sentiment analysis models predict whether a user liked the restaurant or not, based on their review on Yelp.</p>
+        <p>We use 2 Models: Logistic Regression & Random Forest Classifier.</p>
+  </div>
+    <br>
+    <div class="row">
+      <div class="col1">
+    <p>Try it out! Please write your review below:<p>
+    <form action="{{ url_for('submit') }}" method="post">
+      <textarea name="text" rows="6" cols="70" placeholder="Your review here">{{data.input}}</textarea>
+    <br>
+    <input  type="submit" value="Analyze this!">
+    </form>
+  </div>
+  <div class="col2">
+    <p class="p1">Logistic Regression prediction:</p>
+    <p class="p1">{{data.result_lr}}</p>
+    <img src="{{data.image_lr}}" alt="Result Image" width="100" height="100" class="center" />
+    <br>
+    <br>
+  </div>
+  <div class="col3">
+    <p class="p1">Random Forest prediction:</p>
+    <p class="p1">{{data.result_rfc}}</p>
+    <img src="{{data.image_rfc}}" alt="Result Image" width="100" height="100" class="center" />
+    <br>
+    <br>
+  </div>
+  </div>
+  </div>
+  </div>
+    <br>
+</html>
